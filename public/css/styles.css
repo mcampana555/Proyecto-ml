@@ -1,0 +1,308 @@
+:root {
+    --amarillo: #eac926;
+    --azul: #03264c;
+    --celeste: #1259c3;
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+}
+
+p {
+    font-size: 12px;
+}
+
+.titular {
+    font-size: 24px;
+}
+
+.precio {
+    font-size: 18px;
+}
+
+.descuento {
+    font-size: 16px;
+}
+
+.descripcion {
+    font-size: 16px;
+}
+
+/*** selector universal ***/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*** estructura ***/
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    background-color: var(--amarillo);
+    width: 100%;
+    padding: 10px;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+}
+
+.main {
+    background-color: var(--gris-claro);
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: white;
+    width: 100%;
+}
+
+/*** busqueda ***/
+
+.search-container {
+    display: flex;
+}
+
+.search-input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 80%;
+}
+
+.search-button {
+    padding: 10px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    width: 20%;
+}
+
+.header-top-bar-dos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-top-bar img {
+    max-width: 40%;
+}
+
+.search-container {
+    max-width: 60%;
+}
+
+.header-bottom-bar {
+    font-size: 3vw;
+    text-align: center;
+}
+
+@media (min-width: 361px) {
+    .header-top-bar {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-top-bar-dos {
+        flex: 66%;
+    }
+
+    .header-top-bar image {
+        max-width: none;
+    }
+
+    .search-container {
+        max-width: none;
+    }
+
+    .header-bottom-bar {
+        flex: 33%;
+    }
+}
+
+/*** menu hamburguesa ***/
+
+.burger-menu {
+    text-align: center;
+}
+
+.fa-bars {
+    color: white;
+    background-color: var(--celeste);
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*** barra de navegacion ***/
+
+.header-navbar {
+    display: none;
+}
+
+.left-navbar,
+.right-navbar {
+    list-style: none;
+}
+
+.left-navbar li a,
+.right-navbar li a {
+    color: black;
+    text-decoration: none;
+}
+
+.right-navbar li a {
+    margin-right: 10px;
+}
+
+@media (min-width: 361px) {
+    .burger-menu {
+        display: none;
+    }
+
+    .header-navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-navbar {
+        flex: 45%;
+        max-width: 45%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .left-navbar li {
+        font-size: 2vw;
+        text-align: center;
+        max-width: 25%;
+    }
+
+    .right-navbar {
+        flex: 45%;
+        max-width: 45%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .right-navbar li {
+        font-size: 2vw;
+        text-align: center;
+        max-width: 33%;
+    }
+}
+
+/*** footer ***/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.footer-items {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.footer-items i {
+    color: var(--celeste);
+    font-size: 2em;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer .copyright {
+    width: 100%;
+    text-align: left;
+}
+
+/*** articulos vistos/ofertas ***/
+
+.titular {
+    margin: 20px 0;
+}
+
+.lista-articulos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articulo {
+    width: 100%;
+    margin-right: 10px;
+}
+
+/*.articulo:last-child {
+    margin-right: 0;
+}*/
+
+.articulo-detalles {
+    padding: 15px;
+    border: 1px solid var(--gris-claro);
+}
+
+.imagen-articulo {
+    display: block;
+    width: 100%;
+}
+
+.fa-truck {
+    color: var(--verde);
+    font-size: 2em;
+}
+
+.descuento {
+    color: var(--verde);
+}
+
+.descripcion {
+    margin: 20px 0;
+    display: none;
+}
+
+.truck {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.precio-descuento {
+    display: flex;
+    align-items: center;
+}
+
+.precio {
+    flex: 30%;
+}
+
+.descuento {
+    flex: 70%;
+}
+
+@media (min-width: 361px) {
+    .descripcion {
+        display: block;
+    }
+
+    .articulo {
+        width: calc(50% - 10px);
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+}
+
+@media (min-width: 769px) {
+    .articulo {
+        width: calc(25% - 10px);
+    }
+}
+
+/***/
+
